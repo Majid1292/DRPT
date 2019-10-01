@@ -11,7 +11,8 @@
 % usefi [AT] mun [DOT] ca | www.math.mun.ca/~usefi/
 
 % Input: A dataset
-% Output: Selected feautres and the resulting classification accuracy using PFS
+% Output: Selected features and the resulting classification accuracy and also standard deviation of # of selected features and accuracies
+
 
 warning off;
 clear all;
@@ -31,7 +32,7 @@ switch(OS)
         dir = 'Users';
 end
 
-path = ['/', dir,'/', userName, '/Documents/New_folder/'];
+path = ['/', dir,'/', userName, '/Documents/datasets/'];
 %=========================Classifiers and Datasets==============================
 classifier{1} = 'svm';
 classifier{2} = 'rf';
@@ -53,7 +54,7 @@ dataset{9} = 'GDS2547_full_NoFeature.csv';
 clusters=50; %size of k
 runIter = 10; %number of independent runs
 t = 50;
-classifier=classifier{1};
+classifier=classifier{1}; % select SVM as classifier
 for n=2
     %==========================Reading Dataset=============================
 
@@ -235,13 +236,13 @@ for n=2
         m_acc=0;
         fmt = 'Run %d : SF =  %2.2f ,  CA = %2.2f   \r\n';
    end
-     fprintf("\n");
-     toc
-     fprintf("\n\n");
-     o_acc = cAcc(1:c,classifier);
-     ave_acc=mean(max_acc(:, 1));
-     ave_f=mean(max_acc(:, 2));
-     fprintf("\b\n");
-     disp(['  |SF| = ', num2str(ave_f), ', CA = ', num2str(ave_acc),  ', CA(original) = ', num2str(o_acc), '%']);
-     disp(['  SD of SF = ', num2str(std(max_acc(:, 2))), ', SD of CA = ', num2str(std(max_acc(:, 1))) ]);
+   fprintf("\n");
+   toc
+   fprintf("\n\n");
+   o_acc = cAcc(1:c,classifier);
+   ave_acc=mean(max_acc(:, 1));
+   ave_f=mean(max_acc(:, 2));
+   fprintf("\b\n");
+   disp(['  |SF| = ', num2str(ave_f), ', CA = ', num2str(ave_acc),  ', CA(original) = ', num2str(o_acc), '%']);
+   disp(['  SD of SF = ', num2str(std(max_acc(:, 2))), ', SD of CA = ', num2str(std(max_acc(:, 1))) ]);
 end
