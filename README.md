@@ -14,7 +14,7 @@ Here is a link to the paper: will be updated after accepting.
 This code can be run using MATLAB R2007a and above
 
 ## Run
-To run the code, open `DRPT.m` and choose a dataset to apply the method to. The code strats reading the selected dataset using `readLargeCSV.m` written by [Cedric Wannaz](https://www.mathworks.com/matlabcentral/profile/authors/1078046-cedric-wannaz). Then it selects the most important features and find the best subset by looking at the classification accuracies returned by `cAcc.m`. Finally, a subset with the best accuracy and the smallest number of features is selected and returned as the output. All datasets must be stored in *datasets* folder in your *Documents* folder. We use datasets from [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) and datasets can be cleaned by this [code](https://github.com/jracp/NCBIdataPrep)
+For running the code, open `DRPT.m` and pick a dataset to apply the method. The code strats reading the selected dataset using `readLargeCSV.m` written by [Cedric Wannaz](https://www.mathworks.com/matlabcentral/profile/authors/1078046-cedric-wannaz). Then it selects the most important features and find the best subset by looking at the classification accuracies calculated by `cAcc.m`. In the end, a subset with the best accuracy along with a standard deviation of # of selected features and classification accuracies will be returned as the output. 
 
-## Note
-  - Datasets should have no column and/or row names, and the class values should be all numeric
+## Datasets
+All datasets must be stored in *datasets* folder in your *Documents* folder. We use datasets from [Gene Expression Omnibus (GEO)](https://www.ncbi.nlm.nih.gov/geo/) and datasets can be cleaned by this [code](https://github.com/jracp/NCBIdataPrep). Note that datasets should have no column and/or row names, and the class values should be all numeric.
