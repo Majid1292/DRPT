@@ -9,7 +9,7 @@
 % Random Forest (RF),k-Nearest Neighbors (kNN) and Decision Tree (DT) classifiers
 function clsOut = cAcc(selF,classifier)
 
-%%================================Data=====================================
+%%================================Data spliting=====================================
 global data;
 data = data(randperm(size(data, 1)), :);
 [r, ~] = size(data);
@@ -39,7 +39,7 @@ switch(classifier)
         Model = fitcknn(train(:, 1:end-1), train(:, end));
         predicted = predict(Model, test(:, 1:end-1));
     case 'rf'
-          Model= TreeBagger(30,train(:, 1:end-1), train(:, end),'Surrogate','on');%,'OOBPredictorImportance','On');
+          Model= TreeBagger(30,train(:, 1:end-1), train(:, end),'Surrogate','on');
           predictedModel = predict(Model, test(:, 1:end-1));
           for i=1: length(predictedModel)
               charDigit=predictedModel{i};
