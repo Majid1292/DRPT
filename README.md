@@ -1,6 +1,5 @@
 # DRPT
 ---
-title: "HighDimensionalFeatureSelectionforGenomicDatasets"
 authors: "Majid Afshar and Hamid Usefi"
 date: '01/10/19'
 ---
