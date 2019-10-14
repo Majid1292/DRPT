@@ -11,7 +11,7 @@ To determine the most important features using the algorithm described in "High-
 
 Here is a link to the paper: will be updated after accepting.
 ## Compile
-This code can be run using MATLAB R2007a and above
+This code can be run using MATLAB R2008a and above
 
 ## Run
 For running the code, open `DRPT.m` and pick a dataset to apply the method. The code strats reading the selected dataset using `readLargeCSV.m` written by [Cedric Wannaz](https://www.mathworks.com/matlabcentral/profile/authors/1078046-cedric-wannaz). Then it selects the most important features and find the best subset by looking at the classification accuracies calculated by `cAcc.m`. In the end, a subset with the best accuracy along with a standard deviation of # of selected features and classification accuracies will be returned as the output. 
