@@ -120,12 +120,10 @@ for n=2
         threshold=mean(uniqueX(1:outliersLen*10));
         cleanedF=1:allF;      
         while length(cleanedF)>(outliersLen*(2/(ii-1)))
-            %cutoff = max(abs(X)) - (ii/100)* max(abs(X));
             irrF = find(abs(X) < threshold);
             irrF = [irrF, X(irrF)];
             irrF = sortrows(irrF, 2, 'descend');
             irrF = irrF(:, 1);
-            %ii=ii-1;
             threshold=threshold*1.03;
             cleanedF = setxor([1:allF], irrF);
         end
@@ -149,12 +147,6 @@ for n=2
             nr=norm(perVal);
             pA = A + perVal;
             piA = pinv(pA);
-            AB=iA-piA;
-            N=AB'*AB;
-            [Ve,Ei] = eig(N);
-            B=Ve(:, end);
-            B=B/norm(B);
-            X = iA * B;
             Xtilda=piA * B;
             DX = abs(Xtilda - X);
             px(z, :)=DX;
