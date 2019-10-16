@@ -11,7 +11,11 @@ To determine the most important features using the algorithm described in "High-
 
 Here is a link to the paper: will be updated after acceptance.
 ## Compile
-This code can be run using MATLAB R2017a and above
+This code can be run using MATLAB R2017a and above. Also the following toolboxs should be installed as the program dependencies:
+Markup :* Deep Learning Toolbox
+        * Statistics and Machine Learning Toolbox
+        * Parallel Computing Toolbox
+        * Curve Fitting Toolbox
 
 ## Run
 To  run the code, open `DRPT.m` and pick a dataset to apply the method. The code starts reading the dataset using `readLargeCSV.m` written by [Cedric Wannaz](https://www.mathworks.com/matlabcentral/profile/authors/1078046-cedric-wannaz). We note the dataset does not have any headers (neither the features nor the samples IDs).
