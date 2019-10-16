@@ -1,17 +1,17 @@
 ---
-authors: "Majid Afshar and Hamid Usefi"
-date: '01/10/19'
+Authors: "Majid Afshar and Hamid Usefi"
+Date: '01/10/19'
 ---
 
 ## Notice
-The code `DRPT.m` is available now and a link to the paper will be provided soon. If you need more details and explanation about the algorithm, please contact [Majid Afshar](http://www.cs.mun.ca/~mman23/) or [Hamid Usefi](http://www.math.mun.ca/~usefi/).
+The code `DRPT.m` is available now, and a link to the paper will be provided soon. If you need more details and explanation about the algorithm, please contact [Majid Afshar](http://www.cs.mun.ca/~mman23/) or [Hamid Usefi](http://www.math.mun.ca/~usefi/).
 
 ## Use case
 To determine the most important features using the algorithm described in "High-Dimensional Feature Selection for Genomic Datasets" by Majid Afshar and Hamid Usefi
 
-Here is a link to the paper: will be updated after acceptance.
+Here is a link to the paper: it will be updated after acceptance.
 ## Compile
-This code can be run using MATLAB R2017a and above. Also the following toolboxs should be installed as the program dependencies:
+This code can be run using MATLAB R2017a and above. Also, the following toolboxes should be installed as the program dependencies:
 * Deep Learning Toolbox
 * Statistics and Machine Learning Toolbox
 * Parallel Computing Toolbox
