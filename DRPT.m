@@ -234,7 +234,9 @@ for n=2
    o_acc = cAcc(1:c,classifier);
    ave_acc=mean(max_acc(:, 1));
    ave_f=mean(max_acc(:, 2));
+   [~,best_acc]=max(max_acc(:, 1));
    fprintf("\b\n");
    disp(['  |SF| = ', num2str(ave_f), ', CA = ', num2str(ave_acc),  ', CA(original) = ', num2str(o_acc), '%']);
    disp(['  SD of SF = ', num2str(std(max_acc(:, 2))), ', SD of CA = ', num2str(std(max_acc(:, 1))) ]);
+   disp(['  Optimal subset = ', num2str(nonzeros(featuresPicked(:,best_acc))')]);
 end
